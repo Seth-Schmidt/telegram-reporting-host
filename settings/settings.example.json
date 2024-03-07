@@ -1,0 +1,25 @@
+{
+    "telegram": {
+        "bot_token": "XXXXX:XXXXXXXX",
+        "telegram_endpoint": "https://api.telegram.org/",
+        "message_timeout": 600
+    },
+    "rate_limit": "100000/day;200/minute;20/second",
+    "redis": {
+		"host": "redis",
+		"port": 6379,
+		"db": 0,
+		"password": null
+	},
+	"rlimit": {
+		"file_descriptors": 2048
+	},
+	"issue_reporting_service": {
+        "submission_window": 60,
+        "host": "0.0.0.0",
+        "port": 9060,
+        "keys_ttl": 86400,
+        "keepalive_secs": 600,
+        "gunicorn_workers": 20
+    }
+}

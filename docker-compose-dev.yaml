@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  telegram-bot:
+    image: powerloom-telegram-bot
+    expose:
+      - 9060
+    ports:
+      - 9060:9060
+
+  redis:
+    command: ["redis-server"]
+    image: "redis"
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  local_cache:

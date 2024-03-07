@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "telegram-bot"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+async-limits = {git = "https://github.com/powerloom/limits.git"}
+python = "^3.9"
+python-telegram-bot = {extras = ["rate-limiter"], version = "^20.8"}
+pydantic = "^2.6.3"
+loguru = "^0.7.2"
+redis = "^5.0.2"
+limits = "^3.9.0"
+fastapi = "^0.110.0"
+gunicorn = "^21.2.0"
+uvicorn = "^0.27.1"
+web3 = "^6.15.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
